@@ -1,6 +1,3 @@
-window.onload = function() {
-    document.querySelector('.amcharts-chart-div a').style.display = 'none';
-};
 function classExitInterview() {
 
     this.reDrawExitInterview = function () {
@@ -88,6 +85,7 @@ function classExitInterview() {
         if(globalSettings.Settings.initial_data) {
             data = JSON.parse(globalSettings.Settings.initial_data);
         }
+        
         var str = '';
         str +=
         '<div class="container_main">'+ 
@@ -97,16 +95,16 @@ function classExitInterview() {
         '                <div class="block-title">Текучесть</div>'+
         '                <div class="turnover-chart-legend d-flex">'+
         '                    <div class="turnover-chart-legend__item">'+
-        '                        <div class="turnover-chart-legend__item__num">17 720</div>'+
-        '                        <div class="turnover-chart-legend__item__label"><span class="sqr sqr-bg-blue"></span> Текучесть</div>'+
+        '                        <div class="turnover-chart-legend__item__num">' + data.turnover[0].value + '</div>'+
+        '                        <div class="turnover-chart-legend__item__label"><span class="sqr sqr-bg-blue"></span>' + data.turnover[0].label + '</div>'+
         '                    </div>'+
         '                    <div class="turnover-chart-legend__item">'+
-        '                        <div class="turnover-chart-legend__item__num">17 720</div>'+
-        '                        <div class="turnover-chart-legend__item__label"><span class="sqr sqr-bg-aqua"></span> Текучесть до 11 гр.</div>'+
+        '                        <div class="turnover-chart-legend__item__num">' + data.turnover[1].value + '</div>'+
+        '                        <div class="turnover-chart-legend__item__label"><span class="sqr sqr-bg-aqua"></span>' + data.turnover[1].label + '</div>'+
         '                    </div>'+
         '                    <div class="turnover-chart-legend__item">'+
-        '                        <div class="turnover-chart-legend__item__num">8 651 (50%)</div>'+
-        '                        <div class="turnover-chart-legend__item__label"><span class="sqr sqr-bg-orange"></span> Прошли интервью</div>'+
+        '                        <div class="turnover-chart-legend__item__num">' + data.turnover[2].value + '</div>'+
+        '                        <div class="turnover-chart-legend__item__label"><span class="sqr sqr-bg-orange"></span> ' + data.turnover[2].label + '</div>'+
         '                    </div>'+
         '                </div>'+
         '                <div class="turnover-chart">'+
@@ -255,5 +253,8 @@ function classExitInterview() {
                 }
             ]
         });
+        window.onload = function() {
+            document.querySelector('.amcharts-chart-div a').style.display = 'none';
+        };
     }
 }
