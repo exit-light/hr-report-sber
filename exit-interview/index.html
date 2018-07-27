@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="exit-interview.css">
+
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="main-wrapper">
+            <div style="flex-direction: column;display: flex;">
+                <div class="block">
+                    <div class="block-title">Текучесть</div>
+                    <div class="turnover-chart-legend d-flex">
+                        <div class="turnover-chart-legend__item">
+                            <div class="turnover-chart-legend__item__num">17 720</div>
+                            <div class="turnover-chart-legend__item__label"><span class="sqr sqr-bg-blue"></span> Текучесть</div>
+                        </div>
+                        <div class="turnover-chart-legend__item">
+                            <div class="turnover-chart-legend__item__num">17 720</div>
+                            <div class="turnover-chart-legend__item__label"><span class="sqr sqr-bg-aqua"></span> Текучесть до 11 гр.</div>
+                        </div>
+                        <div class="turnover-chart-legend__item">
+                            <div class="turnover-chart-legend__item__num">8 651 (50%)</div>
+                            <div class="turnover-chart-legend__item__label"><span class="sqr sqr-bg-orange"></span> Прошли интервью</div>
+                        </div>
+                    </div>
+                    <div class="turnover-chart">
+                        <div class="turnover-chart__item sqr-bg-blue"></div>
+                        <div class="turnover-chart__item sqr-bg-aqua"></div>
+                        <div class="turnover-chart__item sqr-bg-orange"></div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="block-title">Оценили свою работу</div>
+                    <div class="rate-chart">
+                        <div class="rate-chart__inner">
+                            <div style="width: 100%;height: 300px;" id="chartdiv"></div>
+                        </div>
+                        <div class="rate-chart__legend">
+                            <div class="rate-chart__legend__item">
+                                <span class="value">50 %</span>
+                                <span class="sqr sqr-bg-green"></span>
+                                <span class="label">Позитивно</span>
+                            </div>
+                            <div class="rate-chart__legend__item">
+                                <span class="value">25 %</span>
+                                <span class="sqr sqr-bg-orange"></span>
+                                <span class="label">Неоднозначно</span>
+                            </div>
+                            <div class="rate-chart__legend__item">
+                                <span class="value">25 %</span>
+                                <span class="sqr sqr-bg-red"></span>
+                                <span class="label">Негативно</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="display:flex">
+                <div class="block" style="flex-grow: 1;">
+                    <div class="block-title">Итоги опроса</div>
+                    <div class="results-chart">
+                        <div class="results-chart__item">
+                            <div class="results-chart__item__label">
+                                Готовы в будущем вернуться работать в Сбербанк
+                            </div>
+                            <div class="results-chart__item__graph">
+                                <div class="results-chart__item__graph__inner">
+                                    <div style="width:30%" class="results-chart__item__graph__left"><span class="num">30%</span></div>
+                                    <div style="width:70%" class="results-chart__item__graph__right"><span class="num">70%</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="results-chart">
+                        <div class="results-chart__item">
+                            <div class="results-chart__item__label">
+                                Готовы рекомендовать Сбербанк в качестве работодателя
+                            </div>
+                            <div class="results-chart__item__graph">
+                                <div class="results-chart__item__graph__inner">
+                                    <div style="width:30%" class="results-chart__item__graph__left"><span class="num">30%</span></div>
+                                    <div style="width:70%" class="results-chart__item__graph__right"><span class="num">70%</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="results-chart">
+                        <div class="results-chart__item">
+                            <div class="results-chart__item__label">
+                                Готовы рекомендовать свое подразделение и руководителя
+                            </div>
+                            <div class="results-chart__item__graph">
+                                <div class="results-chart__item__graph__inner">
+                                    <div style="width:30%" class="results-chart__item__graph__left"><span class="num">30%</span></div>
+                                    <div style="width:70%" class="results-chart__item__graph__right"><span class="num">70%</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="results-chart">
+                        <div class="results-chart__item">
+                            <div class="results-chart__item__label">
+                                Была ли у непосредственного руководителя возможность повлиять на решение об уходе
+                            </div>
+                            <div class="results-chart__item__graph">
+                                <div class="results-chart__item__graph__inner">
+                                    <div style="width:30%" class="results-chart__item__graph__left"><span class="num">30%</span></div>
+                                    <div style="width:70%" class="results-chart__item__graph__right"><span class="num">70%</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="results-chart__legend">
+                        <div>
+                            <span class="sqr sqr-bg-aqua"></span> Да 
+                        </div>
+                        <div>
+                            <span class="sqr sqr-bg-light"></span> Нет
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+
+    <script src="exit-interview.js"></script>
+    <script>
+        var chart = AmCharts.makeChart( "chartdiv", {
+            "type": "pie",
+            "showBalloon": false,
+            "labelText": "[[title]]",
+            "color": "#9b9b9b",
+            "innerRadius": "40%",
+            "startAngle": 0,
+            "colors": [
+                "#8ac927",
+                "#ffca39",
+                "#ff585d"
+            ],
+            "labelTickAlpha": 0,
+            "labelRadius": 8,
+            "minRadius": 90,
+            "responsive": {
+                "enabled": false
+            },
+            "hideLabelsPercent": 1,
+            "tabIndex": 0,
+            "titleField": "category",
+            "valueField": "column-1",
+            "allLabels": [],
+            "balloon": {},
+            "startDuration": 0,
+            "titles": [],
+            "dataProvider": [
+                {
+                    "category": 50 + '%',
+                    "column-1": 50
+                },
+                {
+                    "category": 25 + '%',
+                    "column-1": 25
+                },
+                {
+                    "category": 25 + '%',
+                    "column-1": 25
+                }
+            ]
+        });
+        
+        
+        </script>
+
+</body>
+
+</html>
